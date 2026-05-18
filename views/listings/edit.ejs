@@ -10,7 +10,11 @@
                 Edit Your Listing
             </h3>
 
-            <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+            <form 
+                method="POST" action="/listings/<%= listing._id %>?_method=PUT" 
+                novalidate
+                class="needs-validation"
+            >
 
                 <!-- Title -->
                 <div class="mb-3">
@@ -24,7 +28,10 @@
                         value="<%= listing.title %>"
                         class="form-control"
                         placeholder="Enter title"
+                        required
                     >
+
+                    <div class="valid-feedback">Title looks good</div>
                 </div>
 
                 <!-- Description -->
@@ -38,7 +45,11 @@
                         class="form-control"
                         rows="4"
                         placeholder="Enter description"
+                        required
                     ><%= listing.description %></textarea>
+                    <div class="invalid-feedback"> 
+                        Please enter a short description 
+                    </div>
                 </div>
 
                 <!-- Current Image Preview -->
@@ -55,6 +66,7 @@
                         alt="listing_image"
                         class="img-fluid rounded mb-3"
                         style="height: 250px; width: 100%; object-fit: cover;"
+                        required
                     >
 
                 </div>
@@ -72,6 +84,7 @@
                         class="form-control"
                         placeholder="Enter image URL"
                     >
+                    <div class="invalid-feedback">Please enter a valid imgage URL</div>
                 </div>
 
                 <!-- Price + Country -->
@@ -95,7 +108,12 @@
                                 value="<%= listing.price %>"
                                 class="form-control"
                                 placeholder="Price"
+                                required
                             >
+
+                            <div class="invalid-feedback">
+                                Price should be valid
+                            </div>
 
                         </div>
 
@@ -113,8 +131,11 @@
                             value="<%= listing.country %>"
                             class="form-control"
                             placeholder="Enter country"
+                            required
                         >
-
+                        <div class="invalid-feedback">
+                            Country should be valid
+                        </div>
                     </div>
 
                 </div>
@@ -132,8 +153,11 @@
                         value="<%= listing.location %>"
                         class="form-control"
                         placeholder="Enter location"
+                        required
                     >
-
+                    <div class="invalid-feedback">
+                        Location should be valid
+                    </div>
                 </div>
 
                 <!-- Buttons -->
@@ -159,3 +183,5 @@
     </div>
 
 </div>
+
+<script src="/js/script.js"></script>

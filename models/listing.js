@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const defaultLink = "https://cdn.pixabay.com/photo/2017/01/03/19/41/forest-1950402_1280.jpg";
+const defaultLink = "https://www.namasteindiatrip.com/blog/wp-content/uploads/2024/12/Kashi-Vishwanath-Temple.jpg";
 
 const listingSchema = new Schema({
     title: {
@@ -14,6 +14,7 @@ const listingSchema = new Schema({
     },
 
     image: {
+
         filename: {
             type: String,
             default: "listingimage"
@@ -21,7 +22,10 @@ const listingSchema = new Schema({
 
         url: {
             type: String,
-            default: defaultLink
+
+            default: defaultLink,
+
+            set: (v) => v === "" ? defaultLink : v
         }
     },
 

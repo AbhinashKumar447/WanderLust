@@ -1,0 +1,56 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="container error-page">
+
+    <div class="row justify-content-center align-items-center min-vh-100">
+
+        <div class="col-lg-6 text-center">
+
+            <!-- Error Code -->
+            <h1 class="error-code">
+                404
+            </h1>
+
+            <!-- Heading -->
+            <h2 class="fw-bold mb-3">
+                Oops! Page Not Found
+            </h2>
+
+            <!-- Message -->
+            <p class="text-muted fs-5 mb-4">
+
+                <%= message %>
+
+            </p>
+
+            <!-- Image -->
+            <img 
+                src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
+                alt="Page Not Found"
+                class="img-fluid error-img mb-4"
+            >
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center gap-3">
+
+                <a 
+                    href="/"
+                    class="btn btn-dark rounded-pill px-4 py-2"
+                >
+                    Go Home
+                </a>
+
+                <a 
+                    href="/listings"
+                    class="btn btn-outline-dark rounded-pill px-4 py-2"
+                >
+                    Explore Listings
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

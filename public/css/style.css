@@ -193,3 +193,36 @@ body {
 .show-img {
     height: 30vh;
 }
+
+/* Error Page */
+
+.error-page {
+    background-color: #f8f9fa;
+}
+
+.error-code {
+    font-size: 8rem;
+    font-weight: 800;
+    color: #ff385c;
+    letter-spacing: -5px;
+}
+
+.error-img {
+    max-width: 280px;
+}
+
+.error-page h2 {
+    color: #222222;
+}
+
+.error-page p {
+    line-height: 1.8;
+}
+
+.error-page .btn {
+    transition: all 0.2s ease;
+}
+
+.error-page .btn:hover {
+    transform: scale(1.05);
+}
