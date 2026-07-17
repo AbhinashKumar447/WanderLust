@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const review = require("./review");
 const Schema = mongoose.Schema;
 
 const defaultLink = "https://www.namasteindiatrip.com/blog/wp-content/uploads/2024/12/Kashi-Vishwanath-Temple.jpg";
@@ -41,6 +42,11 @@ const listingSchema = new Schema({
     country: {
         type: String
     },
+    reviews: [
+        {
+            type: Schema.Types.ObjectId,
+        }
+    ]
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
